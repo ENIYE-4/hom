@@ -1,0 +1,229 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* min-height: 100vh; */
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1em;
+    gap: 1em;
+}
+.container > div {
+    background-color: white;
+}
+.container > div:first-child {
+    grid-column: 1/5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.container > div:first-child .nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.container > div:first-child .nav ul a {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+.container > div:first-child .logo img {
+    width: 40px;
+}
+.container > div:first-child .menu {
+    display: none;
+}
+.container > div:first-child .line {
+    width: 30px;
+    height: 1px;
+    background-color: black;
+    margin: 5px;
+}
+
+.container > div:nth-child(2) {
+    grid-column: 1/5;
+    height: 50vh;
+    position: relative;
+}
+.container > div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+}
+.container > div:nth-child(2) .internal-nav {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    width: 300px;
+    background-color: rgba(204, 135, 112, 0.358);
+    border-radius: 20px;
+}
+.container > div:nth-child(2) .internal-nav ul {
+    list-style: none;
+    padding: 30px;
+}
+.container > div:nth-child(2) .internal-nav ul li a {
+    display: block;
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+/* STYLE RULES FOR SKILLS */
+.container > div:nth-child(3) {
+    /* padding: 20px; */
+    text-align: left;
+    grid-column: 1/5;
+}
+.container > div:nth-child(3) h1 {
+    border-bottom: 2px solid red;
+}
+.container > div:nth-child(4),
+.container > div:nth-child(5),
+.container > div:nth-child(6),
+.container > div:nth-child(7) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.container > div:nth-child(4):hover,
+.container > div:nth-child(5):hover,
+.container > div:nth-child(6):hover,
+.container > div:nth-child(7):hover {
+    background-color: red;
+    color: white;
+}
+
+.container > div:nth-child(8) {
+    padding: 10px;
+    /* background-color: black; */
+    /* color: white; */
+    height: 50vh;
+    grid-column: 1/5;
+    position: relative;
+}
+
+.container > div:nth-child(8) img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container > div:nth-child(8) .wer {
+    position: absolute;
+    text-align: center;
+    right: 30px;
+    bottom: 50px;
+    width: 300px;
+    background-color: rgba(116, 123, 185, 0.358);
+    border-radius: 20px;
+    grid-column: 1/5;
+    height: 200px;
+    
+}
+.container > div:nth-child(8) .wer ul {
+    list-style: none;
+    padding: 30px;
+}
+.container > div:nth-child(8) .wer ul li {
+    display: block;
+    color: rgb(224, 229, 240);
+    padding: 5px 0;
+    text-decoration: none;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.container > div:nth-child(9) {
+    grid-column: 1/4;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-rows: 1fr 1fr;
+     gap: 1em; 
+     
+}
+.container > div:nth-child(9) > div {
+    /* background-color: rgb(151, 145, 145); */
+    border: 1px solid black;
+}
+.container > div:nth-child(9) > div:first-child {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding: 1em;
+    box-shadow: 5px 5px rgb(180, 165, 165);
+}
+
+.container > div:nth-child(9) > div:first-child h1 {
+    text-align: left;
+}
+.container > div:nth-child(9) > div:first-child label {
+    display: block;
+    /* background-color: white; */
+    font-size: 16px;
+    font-weight: bold;
+}
+.container > div:nth-child(9) > div:first-child input[type="text"]:focus,
+.container > div:nth-child(9) > div:first-child input[type="email"]:focus,
+.container > div:nth-child(9) > div:first-child input[type="tel"]:focus {
+    background-color: #dcdcdc;
+}
+.container > div:nth-child(9) > div:first-child input[type="text"],
+.container > div:nth-child(9) > div:first-child input[type="email"],
+.container > div:nth-child(9) > div:first-child input[type="tel"],
+textarea {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.container > div:nth-child(9) > div:first-child button {
+    display: block;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 200px;
+    cursor: pointer;
+}
+.container > div:nth-child(9) > div:first-child button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+
+.container > div:nth-child(9) > div:last-child {
+    /* background-color: green; */
+    grid-column: 3/5;
+}
+
+.container > div:nth-child(10) > div:first-child img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px #ac8787;
+    cursor: pointer;
+
+}
